@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Nav.scss';
 
-const Nav = () => {
+const Nav = forwardRef((_, ref) => {
   return (
     <nav className='navi'>
       <div className='navi__logo'>
@@ -10,7 +10,7 @@ const Nav = () => {
           Rahony
         </NavLink>
       </div>
-      <div className='slidein__open'>
+      <div className='slidein__open' ref={ref}>
         <img src='/images/menu.svg' alt='' />
       </div>
       <ul className='navi__links'>
@@ -29,9 +29,14 @@ const Nav = () => {
             Lodge
           </NavLink>
         </li>
+        <li className='navi__links__item'>
+          <NavLink exact to='/contact' activeClassName=''>
+            Contact Us
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
-};
+});
 
 export default Nav;

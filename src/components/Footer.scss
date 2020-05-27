@@ -10,8 +10,8 @@
     &__links {
       display: flex;
       color: white;
-      padding: 4rem var(--pagePad);
-      background-color: #012e02;
+      padding: 4rem var(--pagepad);
+      background-color: var(--primary);
       justify-content: space-between;
       &__item {
         &__title {

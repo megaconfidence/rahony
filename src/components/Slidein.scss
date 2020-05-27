@@ -15,7 +15,7 @@
     visibility 0s linear 0.25s;
   &__navi {
     width: 80%;
-    background-color: #012e02;
+    background-color: var(--primary);
     &__links {
       list-style: none;
       margin-top: 4rem;

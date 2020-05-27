@@ -9,7 +9,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
 html {
   font-size: 62.5%;
+  --pagepad: 20%;
+  --primary: #012e02;
+}
+@media (max-width: 600px){
+  html {
+    --pagepad: 10%;
+  }
 }

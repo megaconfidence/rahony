@@ -1,10 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from './Head';
 import './Homepage.scss';
 
 const HomePage = () => {
+  useEffect(() => {
+    const places = document.querySelectorAll(
+      '.group--places .group__list__item'
+    );
+    const expCards = document.querySelectorAll(
+      '.group--places .group__list__item__explore'
+    );
+
+    places.forEach((place, i) => {
+      place.addEventListener('mouseenter', () => {
+        expCards[i].classList.remove('hidden');
+      });
+      expCards[i].addEventListener('mouseleave', () => {
+        expCards[i].classList.add('hidden');
+      });
+    });
+  }, []);
   return (
-    <div>
+    <div className='homepage'>
       <div className='group group--offer'>
         <Head content='What We Offer' />
         <div className='group__list '>
@@ -44,7 +61,7 @@ const HomePage = () => {
         <div className='lodging__btn'>See Lodge Pricing</div>
       </div>
       <div className='group group--facilities'>
-      <Head content='Our Facilities' />
+        <Head content='Our Facilities' />
         <div className='group__list '>
           <div className='group__list__item'>
             <div className='group__list__item__cover'>
@@ -55,7 +72,9 @@ const HomePage = () => {
               />
             </div>
             <div className='group__list__item__text'>
-              <div className='group__list__item__text__title'>Air Condition</div>
+              <div className='group__list__item__text__title'>
+                Air Condition
+              </div>
               <div className='group__list__item__text__content'>
                 Our air conditioned buses help keep you cool through out the
                 duration of your trip.
@@ -97,7 +116,7 @@ const HomePage = () => {
         </div>
       </div>
       <div className='group group--places'>
-      <Head content=' Explore Places' />
+        <Head content=' Explore Places' />
         <div className='group__list '>
           <div className='group__list__item'>
             <img
@@ -106,7 +125,9 @@ const HomePage = () => {
               className='group__list__item__img'
             />
             <div className='group__list__item__explore hidden'>
-              <div className='group__list__item__explore__text'>Explore Lagos</div>
+              <div className='group__list__item__explore__text'>
+                Explore Lagos
+              </div>
               <div className='group__list__item__explore__button'>Explore</div>
             </div>
           </div>
@@ -117,7 +138,9 @@ const HomePage = () => {
               className='group__list__item__img'
             />
             <div className='group__list__item__explore hidden'>
-              <div className='group__list__item__explore__text'>Explore Abuja</div>
+              <div className='group__list__item__explore__text'>
+                Explore Abuja
+              </div>
               <div className='group__list__item__explore__button'>Explore</div>
             </div>
           </div>
@@ -128,13 +151,15 @@ const HomePage = () => {
               className='group__list__item__img'
             />
             <div className='group__list__item__explore hidden'>
-              <div className='group__list__item__explore__text'>Explore Jos</div>
+              <div className='group__list__item__explore__text'>
+                Explore Jos
+              </div>
               <div className='group__list__item__explore__button'>Explore</div>
             </div>
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 };
 

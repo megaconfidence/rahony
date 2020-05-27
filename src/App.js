@@ -6,20 +6,20 @@ import About from './routes/About';
 import Lodge from './routes/Lodge';
 import Service from './routes/Service';
 import NotFound from './routes/Notfound';
-import Slidein from './components/Slidein';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Contact from './routes/Contact';
 
 function App() {
   return (
     <div className='App'>
       <Router>
         <Header />
-        <Slidein />
         <Switch>
           <Route exact path='/' render={(props) => <Home {...props} />} />
           <Route exact path='/about' render={(props) => <About {...props} />} />
           <Route exact path='/lodge' render={(props) => <Lodge {...props} />} />
+          <Route exact path='/contact' render={(props) => <Contact {...props} />} />
           <Route
             exact
             path='/service'

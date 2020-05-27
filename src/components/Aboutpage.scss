@@ -1,0 +1,47 @@
+.aboutpage {
+  padding: 0 var(--pagepad);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  .summary {
+    // text-align: center;
+  }
+  .section {
+    margin: 5rem 0;
+    .head {
+      margin-bottom: 3rem;
+    }
+
+    .person {
+      width: calc((100% / 3) - 10px);
+      display: flex;
+      text-align: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__cover {
+        width: 15rem;
+        height: 15rem;
+        display: flex;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        background-color: #f1f1f1;
+        &__img {
+          width: 60%;
+        }
+      }
+      .name {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+        &__surname {
+          font-weight: bold;
+          margin-right: 1rem;
+        }
+      }
+      .position {
+        font-size: 1rem;
+      }
+    }
+  }
+}
