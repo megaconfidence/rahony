@@ -1,0 +1,32 @@
+.footer {
+    &__image {
+      padding-top: 10rem;
+      margin-bottom: -1rem;
+      background-color: white;
+      img {
+        width: 100%;
+      }
+    }
+    &__links {
+      display: flex;
+      color: white;
+      padding: 4rem var(--pagePad);
+      background-color: #012e02;
+      justify-content: space-between;
+      &__item {
+        &__title {
+          font-size: 2rem;
+          font-weight: bold;
+        }
+        &__link,
+        a {
+          all: unset;
+          li {
+            margin: 1rem 0;
+            font-size: 1.3em;
+            list-style-type: none;
+          }
+        }
+      }
+    }
+  }

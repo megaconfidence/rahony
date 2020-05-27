@@ -1,0 +1,35 @@
+.navi {
+    display: flex;
+    padding: 1.5rem 4rem;
+    align-items: center;
+    justify-content: space-between;
+    .slidein__open {
+      display: none;
+      img {
+        width: 2.5rem
+      }
+    }
+    &__logo {
+      letter-spacing: 0.2rem;
+      font: Bold 3rem/3.8rem "Lobster Two", cursive;
+      a {
+        all: unset;
+        cursor: pointer;
+    }
+}
+&__links {
+    &,
+    li,
+    a {
+        all: unset;
+        cursor: pointer;
+      }
+      &__item a {
+        margin: 0 2rem;
+        font: 1.6rem/1.8rem "Comfortaa", cursive;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }

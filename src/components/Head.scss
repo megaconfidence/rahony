@@ -1,0 +1,12 @@
+.head {
+    font-size: 2.5rem;
+    color: #012e02;
+    font-weight: bold;
+    &__hr {
+      margin: 0;
+      width: 6.5rem;
+      margin-top: 1rem;
+      border-radius: 1rem;
+      border: 0.4rem solid #012e02;
+    }
+  }

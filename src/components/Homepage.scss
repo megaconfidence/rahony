@@ -1,0 +1,200 @@
+body {
+    --pagePad: 20%;
+    margin: 0;
+    font-family: "Comfortaa", cursive;
+  
+    .group {
+      padding: 4.8rem var(--pagePad);
+      &__list {
+        display: flex;
+        flex-direction: row ;
+        margin-top: 9rem;
+        justify-content: space-between;
+        &__item {
+          width: calc(100% / 3);
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: space-between;
+          &__img {
+            width: 60%;
+          }
+          &__text {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .group--facilities {
+      .group {
+        &__list {
+          &__item {
+            &__cover {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 24rem;
+              width: 24rem;
+              background-color: #f1f1f1;
+              border-radius: 50%;
+            }
+            &__img {
+            }
+            &__text {
+              all: unset;
+              text-align: center;
+              &__title {
+                margin: 2.4rem 0;
+                font-size: 2rem;
+                font-weight: bold;
+              }
+              &__content {
+                max-width: 25rem;
+                line-height: 2rem;
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .group--places {
+      background-color: #f1f1f1;
+      .group {
+        &__list {
+          &__item {
+            &__img {
+              width: 25rem;
+              height: 22rem;
+              border-radius: 0.5rem;
+              box-shadow: 0 0 1rem -.3rem #0000007a;
+            }
+            &__explore {
+              width: 25rem;
+              height: 220rem;
+              color: white;
+              display: flex;
+              flex-wrap: wrap;
+              border-radius: 0.5rem;
+              position: absolute;
+              align-items: center;
+              flex-direction: column;
+              justify-content: center;
+              background: #0000005e;
+  
+              &__text {
+                font-size: 1rem;
+                font-weight: bold;
+                margin-bottom: 2rem;
+              }
+              &__button {
+                font-size: 0.8em;
+                cursor: pointer;
+                padding: 0.8rem 3rem;
+                border-radius: 0.5rem;
+                width: fit-content;
+                background-color: #ff3939;
+              }
+            }
+            &__explore.hidden {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .lodging {
+      display: flex;
+      color: white;
+      padding: 4.5rem var(--pagePad);
+      align-items: center;
+      background-color: #ff3939;
+      justify-content: space-between;
+      &__text {
+        &__title {
+          font-size: 2rem;
+        }
+        &__content {
+          margin-top: 2rem;
+          font-size: 1.5rem;
+        }
+      }
+      &__btn {
+        color: #ff3939;
+        font-size: 1.2rem;
+        padding: 1.5rem 3rem;
+        border-radius: 0.5rem;
+        background-color: white;
+      }
+    }
+
+  
+    @media (max-width: 600px) {
+      .header {
+        .jumbo {
+          font-size: 3rem;
+        }
+        .navi {
+          &__links {
+            display: none;
+          }
+          .slidein__open {
+            display: block;
+          }
+        }
+      }
+      .group {
+        &__title {
+          font-size: 2rem;
+          &__hr {
+            border-width: 0.3rem;
+          }
+        }
+        &__list {
+          margin-top: 6rem;
+          flex-direction: column;
+          align-items: center;
+          &__item {
+            &:nth-of-type(2) {
+              margin: 3rem 0;
+            }
+            &__img {
+              width: 15rem;
+            }
+            &__text {
+              font-size: 1.5em;
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+      .group--facilities .group__list__item__text__title {
+        font-size: 1.5em;
+      }
+      .lodging {
+        text-align: center;
+        flex-direction: column;
+        &__btn {
+          margin-top: 3rem;
+        }
+      }
+      .footer__links {
+        text-align: center;
+        flex-direction: column;
+        &__item {
+          margin-bottom: 2rem;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          &__link {
+            li {
+              margin: 0.8rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  
