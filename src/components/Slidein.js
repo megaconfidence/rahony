@@ -13,27 +13,22 @@ const Slidein = forwardRef((_, ref) => {
       <div className='slidein__navi'>
         <ul className='slidein__navi__links'>
           <li className='slidein__navi__links__item'>
-            <NavLink exact to='/' activeClassName='' onClick={closeNav}>
+            <NavLink exact to='/' activeClassName='active' onClick={closeNav}>
               Home
             </NavLink>
           </li>
           <li className='slidein__navi__links__item'>
-            <NavLink exact to='/about' activeClassName='' onClick={closeNav}>
+            <NavLink exact to='/about' activeClassName='active' onClick={closeNav}>
               About
             </NavLink>
           </li>
           <li className='slidein__navi__links__item'>
-            <NavLink exact to='/service' activeClassName='' onClick={closeNav}>
-              Our Services
-            </NavLink>
-          </li>
-          <li className='slidein__navi__links__item'>
-            <NavLink exact to='/lodge' activeClassName='' onClick={closeNav}>
+            <NavLink exact to='/lodge' activeClassName='active' onClick={closeNav}>
               Lodge
             </NavLink>
           </li>{' '}
           <li className='slidein__navi__links__item'>
-            <NavLink exact to='/contact' activeClassName='' onClick={closeNav}>
+            <NavLink exact to='/contact' activeClassName='active' onClick={closeNav}>
               Contact Us
             </NavLink>
           </li>

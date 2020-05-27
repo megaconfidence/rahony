@@ -33,20 +33,91 @@ const AboutPage = () => {
       </div>
       <div className='section'>
         <Head content='Our Executives' />
-        <div className='person'>
-          <div className='person__cover'>
-            <img
-              src='/images/user.svg'
-              alt='executive'
-              className='person__cover__img'
-            />
-          </div>
-          <div>
-            <div className='name'>
-              <span className='name__surname'>Surname</span>
-              <span className='name__firstname'>Name</span>
+
+        <div className='section__row'>
+          {' '}
+          <div className='person'>
+            <div className='person__cover'>
+              <img
+                src='/images/user.svg'
+                alt='executive'
+                className='person__cover__img'
+              />
             </div>
-            <div className='position'>Exec’s Position</div>
+            <div>
+              <div className='name'>
+                <span className='name__surname'>Surname</span>
+                <span className='name__firstname'>Name</span>
+              </div>
+              <div className='position'>Exec’s Position</div>
+            </div>
+          </div>{' '}
+          <div className='person'>
+            <div className='person__cover'>
+              <img
+                src='/images/user.svg'
+                alt='executive'
+                className='person__cover__img'
+              />
+            </div>
+            <div>
+              <div className='name'>
+                <span className='name__surname'>Surname</span>
+                <span className='name__firstname'>Name</span>
+              </div>
+              <div className='position'>Exec’s Position</div>
+            </div>
+          </div>
+        </div>
+        <div className='section__row'>
+          {' '}
+          <div className='person'>
+            <div className='person__cover'>
+              <img
+                src='/images/user.svg'
+                alt='executive'
+                className='person__cover__img'
+              />
+            </div>
+            <div>
+              <div className='name'>
+                <span className='name__surname'>Surname</span>
+                <span className='name__firstname'>Name</span>
+              </div>
+              <div className='position'>Exec’s Position</div>
+            </div>
+          </div>{' '}
+          <div className='person'>
+            <div className='person__cover'>
+              <img
+                src='/images/user.svg'
+                alt='executive'
+                className='person__cover__img'
+              />
+            </div>
+            <div>
+              <div className='name'>
+                <span className='name__surname'>Surname</span>
+                <span className='name__firstname'>Name</span>
+              </div>
+              <div className='position'>Exec’s Position</div>
+            </div>
+          </div>{' '}
+          <div className='person'>
+            <div className='person__cover'>
+              <img
+                src='/images/user.svg'
+                alt='executive'
+                className='person__cover__img'
+              />
+            </div>
+            <div>
+              <div className='name'>
+                <span className='name__surname'>Surname</span>
+                <span className='name__firstname'>Name</span>
+              </div>
+              <div className='position'>Exec’s Position</div>
+            </div>
           </div>
         </div>
       </div>

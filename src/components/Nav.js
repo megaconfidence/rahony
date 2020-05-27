@@ -15,22 +15,21 @@ const Nav = forwardRef((_, ref) => {
       </div>
       <ul className='navi__links'>
         <li className='navi__links__item'>
-          <NavLink exact to='/about' activeClassName=''>
+          <NavLink exact to='/' activeClassName='active'>
+            Home
+          </NavLink>
+        </li> <li className='navi__links__item'>
+          <NavLink exact to='/about' activeClassName='active'>
             About
           </NavLink>
         </li>
         <li className='navi__links__item'>
-          <NavLink exact to='/service' activeClassName=''>
-            Our Services
-          </NavLink>
-        </li>
-        <li className='navi__links__item'>
-          <NavLink exact to='/lodge' activeClassName=''>
+          <NavLink exact to='/lodge' activeClassName='active'>
             Lodge
           </NavLink>
         </li>
         <li className='navi__links__item'>
-          <NavLink exact to='/contact' activeClassName=''>
+          <NavLink exact to='/contact' activeClassName='active'>
             Contact Us
           </NavLink>
         </li>

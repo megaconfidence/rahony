@@ -8,7 +8,6 @@ const Header = ({ location: { pathname } }) => {
   const path = pathname.replace('/', '');
   const content = {
     home: 'Safe rides to anywhere in Nigeria and West Africa.',
-    service: 'Our Services',
     about: 'About Us',
     contact: 'Contact Us'
   };
@@ -27,7 +26,7 @@ const Header = ({ location: { pathname } }) => {
   }, []);
 
   return (
-    <header className='header'>
+    <header className={`header ${path ? 'small' : ''}`}>
       <Slidein
         ref={{
           slidein,

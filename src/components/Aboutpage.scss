@@ -1,7 +1,7 @@
 .aboutpage {
   padding: 0 var(--pagepad);
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.5rem;
   .summary {
     // text-align: center;
   }
@@ -41,6 +41,15 @@
       }
       .position {
         font-size: 1rem;
+      }
+    }
+    &__row {
+      display: flex;
+      margin-top: 10rem;
+      margin-bottom: 10rem;
+      justify-content: center;
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }

@@ -18,4 +18,8 @@ html {
   html {
     --pagepad: 10%;
   }
+}@media (min-width: 1480px){
+  html {
+    --pagepad: 25%;
+  }
 }

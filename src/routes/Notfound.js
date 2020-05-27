@@ -4,20 +4,20 @@ const NotFound = () => {
   return (
     <div
       style={{
-        marginTop: '50px',
+        margin: '10rem 0',
         textAlign: 'center'
       }}
     >
       <div
         style={{
-          fontSize: '100px'
+          fontSize: '10rem'
         }}
       >
         404
       </div>{' '}
       <div
         style={{
-          fontSize: '50px'
+          fontSize: '5rem'
         }}
       >
         Page Not Found
