@@ -1,24 +1,36 @@
+.header__overlay,
 .header {
-  height: 45rem;
-  color: white;
-  margin-bottom: 5rem;
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: url('/images/city.jpg');
   &.small {
     height: 30rem;
     background-position: center;
   }
+}
+.header__overlay  {
+  margin-bottom: 5rem;
+
+}
+.header {
+  height: 45rem;
+  color: white;
+  position: relative;
   .jumbo {
-    display: flex;
-    font-size: bold;
+    top: 50%;
+    left: 50%;
+    width: 50%;
     font-size: 3.5rem;
+    position: absolute;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     padding: 0 var(--pagepad);
-    height: calc(100% - 6.8rem);
+    transform: translate(-50%, -50%);
+    .main {
+      font-weight: bold;
+    }
+    .sub {
+      // color: #01330298;
+    }
   }
   @media (max-width: 600px) {
     .jumbo {

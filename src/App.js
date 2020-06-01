@@ -8,6 +8,8 @@ import NotFound from './routes/Notfound';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Contact from './routes/Contact';
+import Places from './routes/Places';
+import Explore from './routes/Explore';
 
 function App() {
   return (
@@ -18,7 +20,21 @@ function App() {
           <Route exact path='/' render={(props) => <Home {...props} />} />
           <Route exact path='/about' render={(props) => <About {...props} />} />
           <Route exact path='/lodge' render={(props) => <Lodge {...props} />} />
-          <Route exact path='/contact' render={(props) => <Contact {...props} />} />
+          <Route
+            exact
+            path='/contact'
+            render={(props) => <Contact {...props} />}
+          />
+          <Route
+            exact
+            path='/places'
+            render={(props) => <Places {...props} />}
+          />
+          <Route
+            exact
+            path='/places/:place'
+            render={(props) => <Explore {...props} />}
+          />
           <Route component={NotFound} />
         </Switch>
         <Footer />

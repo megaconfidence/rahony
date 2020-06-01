@@ -6,10 +6,36 @@ import Slidein from './Slidein';
 
 const Header = ({ location: { pathname } }) => {
   const path = pathname.replace('/', '');
-  const content = {
+  const main = {
     home: 'Safe rides to anywhere in Nigeria and West Africa.',
     about: 'About Us',
-    contact: 'Contact Us'
+    places: 'Places',
+    contact: 'Contact Us',
+    'places/jibowu': 'The Centre of Excellence',
+    'places/ejigbo': 'The Centre of Excellence',
+    'places/water line': 'The Treasure Base',
+    'places/oil mill': 'The Treasure Base',
+    'places/tunde idiagbon': 'Federal Capital Territory',
+    'places/owerri': 'The Eastern Heartland',
+    'places/yenogoa': 'The Glory of all Lands',
+  };
+  const sub = {
+    'places/jibowu': 'Lagos',
+    'places/ejigbo': 'Lagos',
+    'places/water line': 'Port Harcourt',
+    'places/oil mill': 'Port Harcourt',
+    'places/tunde idiagbon': 'Abuja',
+    'places/owerri': 'Imo',
+    'places/yenogoa': 'Bayelsa',
+  };
+  const img = {
+    'places/jibowu': 'lagos2.jpg',
+    'places/ejigbo': 'lagos.jpg',
+    'places/water line': 'portharcourt1.jpg',
+    'places/oil mill': 'portharcourt2.jpg',
+    'places/tunde idiagbon': 'abuja.jpg',
+    'places/owerri': 'imo.jpg',
+    'places/yenogoa': 'bayelsa.jpg',
   };
   const slidein = useRef(null);
   const slideinClose = useRef(null);
@@ -26,16 +52,29 @@ const Header = ({ location: { pathname } }) => {
   }, []);
 
   return (
-    <header className={`header ${path ? 'small' : ''}`}>
-      <Slidein
-        ref={{
-          slidein,
-          slideinClose
-        }}
-      />
-      <Nav ref={slideinOpen} />
-      <div className='jumbo'>{content[path] || content['home']}</div>
-    </header>
+    <div
+      style={{
+        backgroundImage: `url(/images/${img[path] || 'city.jpg'})`
+      }}
+      className={`header__overlay ${path ? 'small' : ''}`}
+    >
+      <div
+        className={`header ${path ? 'small' : ''}`}
+        style={{ background: `${img[path] ? 'rgba(1, 30, 2, 0.92)' : ''}` }}
+      >
+        <Slidein
+          ref={{
+            slidein,
+            slideinClose
+          }}
+        />
+        <Nav ref={slideinOpen} />
+        <div className='jumbo'>
+          <div className='main'>{main[path] || main['home']}</div>
+          <div className='sub'>{sub[path] || sub['home']}</div>
+        </div>
+      </div>
+    </div>
   );
 };
 export default withRouter(Header);

@@ -1,0 +1,31 @@
+.explorepage {
+  padding: 0 var(--pagepad);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  .main {
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: row-reverse;
+    // flex-wrap: wrap;
+    .map {
+        margin-left: 2rem;
+    }
+    .info {
+      &__item {
+        &__title {
+          font-weight: bold;
+        }
+        &__img {
+          background-color: #f1f1f1;
+          height: 20rem;
+          border-radius: 5px;
+          margin: 2rem 0;
+        }
+        &__text {
+            opacity: 0.8;
+            font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

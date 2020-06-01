@@ -46,10 +46,10 @@ const AboutPage = () => {
             </div>
             <div>
               <div className='name'>
-                <span className='name__surname'>Surname</span>
-                <span className='name__firstname'>Name</span>
+                <span className='name__surname'>Okoghenun</span>
+                <span className='name__firstname'>Paul</span>
               </div>
-              <div className='position'>Exec’s Position</div>
+              <div className='position'>Managing Director</div>
             </div>
           </div>{' '}
           <div className='person'>
@@ -62,10 +62,10 @@ const AboutPage = () => {
             </div>
             <div>
               <div className='name'>
-                <span className='name__surname'>Surname</span>
-                <span className='name__firstname'>Name</span>
+                <span className='name__surname'>Aremu</span>
+                <span className='name__firstname'>Oluwole</span>
               </div>
-              <div className='position'>Exec’s Position</div>
+              <div className='position'>General Manager</div>
             </div>
           </div>
         </div>
@@ -81,10 +81,10 @@ const AboutPage = () => {
             </div>
             <div>
               <div className='name'>
-                <span className='name__surname'>Surname</span>
-                <span className='name__firstname'>Name</span>
+                <span className='name__surname'>Everestus</span>
+                <span className='name__firstname'>Linda</span>
               </div>
-              <div className='position'>Exec’s Position</div>
+              <div className='position'>Admin Manager</div>
             </div>
           </div>{' '}
           <div className='person'>
@@ -97,10 +97,10 @@ const AboutPage = () => {
             </div>
             <div>
               <div className='name'>
-                <span className='name__surname'>Surname</span>
-                <span className='name__firstname'>Name</span>
+                <span className='name__surname'>Adejobi</span>
+                <span className='name__firstname'>Adeleke</span>
               </div>
-              <div className='position'>Exec’s Position</div>
+              <div className='position'>Logistics Supervisor</div>
             </div>
           </div>{' '}
           <div className='person'>
@@ -113,10 +113,10 @@ const AboutPage = () => {
             </div>
             <div>
               <div className='name'>
-                <span className='name__surname'>Surname</span>
-                <span className='name__firstname'>Name</span>
+                <span className='name__surname'>Okoye</span>
+                <span className='name__firstname'>Innocent</span>
               </div>
-              <div className='position'>Exec’s Position</div>
+              <div className='position'>Head of Operations</div>
             </div>
           </div>
         </div>
