@@ -58,9 +58,14 @@
     }
     @media (max-width: 600px) {
       display: block;
-      .map iframe {
-        width: 30rem;
-        height: 30rem;
+      .map {
+          display: flex;
+          justify-content: center;
+          margin: 0;
+        iframe {
+          width: 40rem;
+          height: 40rem;
+        }
       }
     }
   }

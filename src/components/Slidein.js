@@ -18,6 +18,10 @@ const Slidein = forwardRef((_, ref) => {
             </NavLink>
           </li>
           <li className='slidein__navi__links__item'>
+            <NavLink exact to='/places' activeClassName='active' onClick={closeNav}>
+              Places
+            </NavLink>
+          </li>    <li className='slidein__navi__links__item'>
             <NavLink exact to='/about' activeClassName='active' onClick={closeNav}>
               About
             </NavLink>
