@@ -22,8 +22,8 @@ const Header = ({ location: { pathname } }) => {
   const sub = {
     'places/jibowu': 'Lagos',
     'places/ejigbo': 'Lagos',
-    'places/water line': 'Port Harcourt',
-    'places/oil mill': 'Port Harcourt',
+    'places/water line': 'Rivers',
+    'places/oil mill': 'Rivers',
     'places/tunde idiagbon': 'Abuja',
     'places/owerri': 'Imo',
     'places/yenogoa': 'Bayelsa',

@@ -12,7 +12,7 @@ const ContactPage = () => {
           <div>101 Jibowu, Yaba</div>
           <div>Lagos State</div>
         </div>
-      </div>{' '}
+      </div>
       <div className='detail'>
         <div className='detail__icon'>
           <img src='/images/phone.svg' alt='phone' />
@@ -21,7 +21,7 @@ const ContactPage = () => {
           <div>+2348023456789</div>
           <div>+2348023456789</div>
         </div>
-      </div>{' '}
+      </div>
       <div className='detail'>
         <div className='detail__icon'>
           <img src='/images/mail.svg' alt='mail' />

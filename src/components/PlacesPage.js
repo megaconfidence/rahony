@@ -28,7 +28,7 @@ const PlacesPage = () => {
     {
       img: 'abuja.jpg',
       city: 'Tunde Idiagbon',
-      state: 'Aboja'
+      state: 'Abuja'
     },
     {
       img: 'imo.jpg',
@@ -46,8 +46,8 @@ const PlacesPage = () => {
       <p>Lovely places across Nigeria where you can get our services.</p>
       <Head content='Explor Places' />
       <div className='places'>
-        {places.map((p) => (
-         <Link to={`/places/${p.city.toLowerCase()}`}> <div className='pcard'>
+        {places.map((p, k) => (
+         <Link key={k} to={`/places/${p.city.toLowerCase()}`}> <div className='pcard'>
          <div
            className='pcard__top'
            style={{ backgroundImage: `url(/images/${p.img})` }}
