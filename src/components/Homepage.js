@@ -67,7 +67,7 @@ const HomePage = () => {
             <div className='group__list__item__cover'>
               <img
                 src='/images/ac.svg'
-                alt='transportation'
+                alt='air condition'
                 className='group__list__item__img'
               />
             </div>
@@ -85,14 +85,14 @@ const HomePage = () => {
             <div className='group__list__item__cover'>
               <img
                 src='/images/media.svg'
-                alt='lodging'
+                alt='media'
                 className='group__list__item__img'
               />
             </div>
             <div className='group__list__item__text'>
               <div className='group__list__item__text__title'>Media</div>
               <div className='group__list__item__text__content'>
-                Stay relaxed as you are entertained with either music or movies
+                Stay relaxed as you are entertained with music 
                 while on your trip.
               </div>
             </div>
@@ -101,7 +101,7 @@ const HomePage = () => {
             <div className='group__list__item__cover'>
               <img
                 src='/images/luggage.svg'
-                alt='logistics'
+                alt='luggage'
                 className='group__list__item__img'
               />
             </div>
@@ -121,7 +121,7 @@ const HomePage = () => {
           <div className='group__list__item'>
             <img
               src='/images/lagos.jpg'
-              alt='transportation'
+              alt='lagos'
               className='group__list__item__img'
             />
             <div className='group__list__item__explore hidden'>
@@ -134,7 +134,7 @@ const HomePage = () => {
           <div className='group__list__item'>
             <img
               src='/images/abuja.jpg'
-              alt='lodging'
+              alt='abuja'
               className='group__list__item__img'
             />
             <div className='group__list__item__explore hidden'>
@@ -147,7 +147,7 @@ const HomePage = () => {
           <div className='group__list__item'>
             <img
               src='/images/jos.jpg'
-              alt='logistics'
+              alt='jos'
               className='group__list__item__img'
             />
             <div className='group__list__item__explore hidden'>

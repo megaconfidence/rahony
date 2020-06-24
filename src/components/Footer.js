@@ -16,18 +16,18 @@ const Footer = () => {
               <NavLink to='/about'>About</NavLink>
             </li>
             <li>
-              <NavLink to='/service'>Our Services</NavLink>
+              <NavLink to='/places'>Places</NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to='#'>Bus Terminals</NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className='footer__links__item'>
           <div className='footer__links__item__title'>Information</div>
           <ul className='footer__links__item__link'>
             <li>
-              <NavLink to='#'>Contact Us</NavLink>
+              <NavLink to='/contact'>Contact Us</NavLink>
             </li>
           </ul>
         </div>

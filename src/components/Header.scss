@@ -8,23 +8,20 @@
     background-position: center;
   }
 }
-.header__overlay  {
+.header__overlay {
   margin-bottom: 5rem;
-
 }
 .header {
   height: 45rem;
   color: white;
-  position: relative;
   .jumbo {
-    top: 50%;
-    left: 50%;
-    width: max-content;
+    height: 50%;
+    display: flex;
     font-size: 3.5rem;
-    position: absolute;
     text-align: center;
-    padding: 0 var(--pagepad);
-    transform: translate(-50%, -50%);
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     .main {
       font-weight: bold;
     }

@@ -7,7 +7,7 @@ import Slidein from './Slidein';
 const Header = ({ location: { pathname } }) => {
   const path = pathname.replace('/', '');
   const main = {
-    home: 'Safe rides to anywhere in Nigeria and West Africa.',
+    home: 'Safe rides to anywhere in Nigeria',
     about: 'About Us',
     places: 'Places',
     contact: 'Contact Us',

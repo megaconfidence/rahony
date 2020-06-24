@@ -47,7 +47,7 @@ const PlacesPage = () => {
       <Head content='Explor Places' />
       <div className='places'>
         {places.map((p, k) => (
-         <Link key={k} to={`/places/${p.city.toLowerCase()}`}> <div className='pcard'>
+         <Link className={'grid'+(k+1)} key={k} to={`/places/${p.city.toLowerCase()}`}> <div className='pcard'>
          <div
            className='pcard__top'
            style={{ backgroundImage: `url(/images/${p.img})` }}
