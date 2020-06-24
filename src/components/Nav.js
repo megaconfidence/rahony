@@ -20,7 +20,7 @@ const Nav = forwardRef((_, ref) => {
           </NavLink>
         </li>
         <li className='navi__links__item'>
-          <NavLink exact to='/places' activeClassName='active'>
+          <NavLink to='/places' activeClassName='active'>
             Places
           </NavLink>
         </li> <li className='navi__links__item'>

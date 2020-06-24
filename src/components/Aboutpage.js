@@ -69,13 +69,13 @@ const AboutPage = () => {
                 <span className='name__surname'>Okoghenun</span>
                 <span className='name__firstname'>Paul</span>
               </div>
-              <div className='position'>Managing Director</div>
+              <div className='position'>MD/CEO</div>
             </div>
           </div>{' '}
           <div className='person'>
             <div className='person__cover'>
               <img
-                src='/images/user.svg'
+                src='/images/oluwole.jpeg'
                 alt='executive'
                 className='person__cover__img'
               />
@@ -94,7 +94,7 @@ const AboutPage = () => {
           <div className='person'>
             <div className='person__cover'>
               <img
-                src='/images/user.svg'
+                src='/images/linda.jpeg'
                 alt='executive'
                 className='person__cover__img'
               />
@@ -110,7 +110,7 @@ const AboutPage = () => {
           <div className='person'>
             <div className='person__cover'>
               <img
-                src='/images/user.svg'
+                src='/images/adeleke.jpeg'
                 alt='executive'
                 className='person__cover__img'
               />
@@ -126,7 +126,7 @@ const AboutPage = () => {
           <div className='person'>
             <div className='person__cover'>
               <img
-                src='/images/user.svg'
+                src='/images/innocent.jpeg'
                 alt='executive'
                 className='person__cover__img'
               />

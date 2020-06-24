@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Head from './Head';
 import './Homepage.scss';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   useEffect(() => {
@@ -92,8 +93,8 @@ const HomePage = () => {
             <div className='group__list__item__text'>
               <div className='group__list__item__text__title'>Media</div>
               <div className='group__list__item__text__content'>
-                Stay relaxed as you are entertained with music 
-                while on your trip.
+                Stay relaxed as you are entertained with music while on your
+                trip.
               </div>
             </div>
           </div>
@@ -118,45 +119,57 @@ const HomePage = () => {
       <div className='group group--places'>
         <Head content=' Explore Places' />
         <div className='group__list '>
-          <div className='group__list__item'>
-            <img
-              src='/images/lagos.jpg'
-              alt='lagos'
-              className='group__list__item__img'
-            />
-            <div className='group__list__item__explore hidden'>
-              <div className='group__list__item__explore__text'>
-                Explore Lagos
+          <Link to='/places/jibowu'>
+            <div className='group__list__item'>
+              <img
+                src='/images/lagos2.jpg'
+                alt='lagos'
+                className='group__list__item__img'
+              />
+              <div className='group__list__item__explore hidden'>
+                <div className='group__list__item__explore__text'>
+                  Explore Lagos
+                </div>
+                <div className='group__list__item__explore__button'>
+                  Explore
+                </div>
               </div>
-              <div className='group__list__item__explore__button'>Explore</div>
             </div>
-          </div>
-          <div className='group__list__item'>
-            <img
-              src='/images/abuja.jpg'
-              alt='abuja'
-              className='group__list__item__img'
-            />
-            <div className='group__list__item__explore hidden'>
-              <div className='group__list__item__explore__text'>
-                Explore Abuja
+          </Link>
+          <Link to='/places/tunde idiagbon'>
+            <div className='group__list__item'>
+              <img
+                src='/images/abuja.jpg'
+                alt='abuja'
+                className='group__list__item__img'
+              />
+              <div className='group__list__item__explore hidden'>
+                <div className='group__list__item__explore__text'>
+                  Explore Abuja
+                </div>
+                <div className='group__list__item__explore__button'>
+                  Explore
+                </div>
               </div>
-              <div className='group__list__item__explore__button'>Explore</div>
             </div>
-          </div>
-          <div className='group__list__item'>
-            <img
-              src='/images/jos.jpg'
-              alt='jos'
-              className='group__list__item__img'
-            />
-            <div className='group__list__item__explore hidden'>
-              <div className='group__list__item__explore__text'>
-                Explore Jos
+          </Link>
+          <Link to='/places/water line'>
+            <div className='group__list__item'>
+              <img
+                src='/images/portharcourt1.jpg'
+                alt='port harcourt'
+                className='group__list__item__img'
+              />
+              <div className='group__list__item__explore hidden'>
+                <div className='group__list__item__explore__text'>
+                  Explore Port Harcourt
+                </div>
+                <div className='group__list__item__explore__button'>
+                  Explore
+                </div>
               </div>
-              <div className='group__list__item__explore__button'>Explore</div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </div>
