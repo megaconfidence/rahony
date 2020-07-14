@@ -59,7 +59,9 @@ const HomePage = () => {
             Enjoy comfort and rest in any of our affordable lodges.
           </div>
         </div>
-        <div className='lodging__btn'>Pricing</div>
+        <Link to='/lodge'>
+          <div className='lodging__btn'>Pricing</div>
+        </Link>
       </div>
       <div className='group group--facilities'>
         <Head content='Our Facilities' />

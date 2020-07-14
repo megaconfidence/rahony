@@ -34,6 +34,9 @@
         &__text {
           opacity: 0.8;
           font-size: 1.3rem;
+          &.--margin_top {
+            margin-top: 2rem;
+          }
         }
       }
       &__details {
@@ -42,17 +45,22 @@
           display: flex;
           align-items: center;
           &__icon {
+            width: 30%;
             margin-right: 2rem;
-            background-color: #f1f1f1;
-            border-radius: 50%;
-            width: 8rem;
-            height: 8rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img {
-              width: 5rem;
+            &__cover {
+              padding: 2rem;
+              width: fit-content;
+              height: fit-content;
+              border-radius: 9999px;
+              background-color: #f1f1f1;
+              img {
+                width: 5rem;
+                height: 4rem;
+              }
             }
+          }
+          &__items {
+            width: 70%;
           }
         }
       }
@@ -60,9 +68,9 @@
     @media (max-width: 600px) {
       display: block;
       .map {
-          display: flex;
-          justify-content: center;
-          margin: 0;
+        display: flex;
+        justify-content: center;
+        margin: 0;
         iframe {
           width: 40rem;
           height: 40rem;

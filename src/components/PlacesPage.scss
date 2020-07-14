@@ -33,12 +33,13 @@
     }
     &__bottom {
       padding: 1rem;
+      font-size: 1.2rem;
       &__city {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: bold;
       }
       &__state {
-        margin: 0.5rem 0 0.7rem;
+        margin: 0.7rem 0 0.9rem;
       }
       &__btn {
         color: white;

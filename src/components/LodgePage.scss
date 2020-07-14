@@ -1,0 +1,24 @@
+.lodgePage {
+  padding: 0 var(--pagepad);
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  table {
+    width: 100%;
+    font-size: 2rem;
+    text-align: left;
+    border-collapse: collapse;
+    td,
+    th {
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #dddddd;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  }
+  .note {
+    margin-top: 5rem;
+  }
+}

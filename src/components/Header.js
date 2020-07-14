@@ -11,6 +11,7 @@ const Header = ({ location: { pathname } }) => {
     about: 'About Us',
     places: 'Places',
     contact: 'Contact Us',
+    lodge: 'Our Lodge Prices',
     'places/jibowu': 'The Centre of Excellence',
     'places/ejigbo': 'The Centre of Excellence',
     'places/water line': 'The Treasure Base',
