@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './ExplorePage.scss';
+import Head from './Head';
 
 const ExplorePage = ({ location: { pathname } }) => {
   const map = useRef(null);
@@ -98,9 +99,10 @@ const ExplorePage = ({ location: { pathname } }) => {
         <div className='map' ref={map}></div>
         <div className='info'>
           <div className='info__item'>
-            <div className='info__item__title'>Our Services</div>
-            <div className='info__item__img'></div>
-            <div className='info__item__text'>{details[place].body}</div>
+            <Head content='Our Services' />
+            <div className='info__item__text --margin_top'>
+              {details[place].body}
+            </div>
             <div className='info__item__text --margin_top'>
               Hire services are available to individuals and orgainsations to
               different parts o the country even to places where we do not have

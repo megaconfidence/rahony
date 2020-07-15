@@ -1,42 +1,36 @@
 .explorepage {
-  padding: 0 var(--pagepad);
   font-size: 1.5rem;
   line-height: 2.5rem;
+  .intro {
+    padding: 0 var(--pagepad);
+  }
   .main {
+    width: 70%;
     display: flex;
+    margin: 0 auto;
     margin-top: 5rem;
     flex-direction: row-reverse;
+    justify-content: space-between;
     // flex-wrap: wrap;
     .map {
       margin-left: 2rem;
-      width: 500px;
       width: 50%;
       iframe {
-        box-shadow: 0px 3px 4px #00000029;
-        border-radius: 5px;
-        width: 30rem;
+        width: 100%;
         height: 60rem;
+        border-radius: 5px;
+        box-shadow: 0px 3px 4px #00000029;
       }
     }
     .info {
       width: 50%;
       &__item {
         margin-top: 2rem;
-        &__title {
-          font-weight: bold;
-        }
-        &__img {
-          background-color: #f1f1f1;
-          // height: 20rem;
-          height: 1rem;
-          border-radius: 5px;
-          margin: 2rem 0;
-        }
         &__text {
           opacity: 0.8;
           font-size: 1.3rem;
           &.--margin_top {
-            margin-top: 2rem;
+            margin-top: 3rem;
           }
         }
       }
@@ -79,7 +73,16 @@
         }
       }
       .info {
+        margin-top: 5rem;
         width: 100%;
+      }
+    }
+    @media (min-width: 600px) and (max-width: 880px) {
+      .map {
+        width: 45%;
+      }
+      .info {
+        width: 65%;
       }
     }
   }
