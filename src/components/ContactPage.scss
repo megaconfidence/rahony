@@ -22,5 +22,11 @@
         width: 5rem;
       }
     }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: inherit;
+    }
   }
 }

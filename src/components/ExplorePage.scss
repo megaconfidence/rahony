@@ -10,7 +10,7 @@
     .map {
       margin-left: 2rem;
       width: 500px;
-      width: 100%;
+      width: 50%;
       iframe {
         box-shadow: 0px 3px 4px #00000029;
         border-radius: 5px;
@@ -19,6 +19,7 @@
       }
     }
     .info {
+      width: 50%;
       &__item {
         margin-top: 2rem;
         &__title {
@@ -68,6 +69,7 @@
     @media (max-width: 600px) {
       display: block;
       .map {
+        width: 100%;
         display: flex;
         justify-content: center;
         margin: 0;
@@ -75,6 +77,9 @@
           width: 40rem;
           height: 40rem;
         }
+      }
+      .info {
+        width: 100%;
       }
     }
   }

@@ -10,10 +10,13 @@
   &__links {
     display: flex;
     color: white;
+    flex-wrap: wrap;
     padding: 4rem var(--pagepad);
     background-color: var(--primary);
     justify-content: space-between;
     &__item {
+      margin: 1rem 0;
+      padding: 0 2rem;
       &__title {
         font-size: 2rem;
         font-weight: bold;

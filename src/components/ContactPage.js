@@ -3,13 +3,17 @@ import './ContactPage.scss';
 const ContactPage = () => {
   return (
     <div className='contact'>
-      <p>We are always available to assist you. Our Omni-Channel contact centre agents are available 24/7 to support you. We prioritize requests about our service or your experience above everything else.</p>
+      <p>
+        We are always available to assist you. Our omni-channel contact centre
+        agents are available 24/7 to support you. We prioritize requests about
+        our service or your experience above everything else.
+      </p>
       <div className='detail'>
         <div className='detail__icon'>
           <img src='/images/map.svg' alt='map' />
         </div>
         <div className='detail__items'>
-          <div>101 Jibowu, Yaba</div>
+          <div>29, Ikorodu Road, Jibowu Bus Stop</div>
           <div>Lagos State</div>
         </div>
       </div>
@@ -18,8 +22,8 @@ const ContactPage = () => {
           <img src='/images/phone.svg' alt='phone' />
         </div>
         <div className='detail__items'>
-          <div>+2348023456789</div>
-          <div>+2348023456789</div>
+          <div>09036771159</div>
+          <div>09036771160</div>
         </div>
       </div>
       <div className='detail'>
@@ -27,8 +31,12 @@ const ContactPage = () => {
           <img src='/images/mail.svg' alt='mail' />
         </div>
         <div className='detail__items'>
-          <div>Info@rahony.com</div>
-          <div>support@rahony.com</div>
+          <div>
+            <a href='mailto:rahony@yahoo.com'>rahony@yahoo.com</a>
+          </div>
+          <div>
+            {/* <a href='mailto:rahony@yahoo.com'>rahony@yahoo.com</a> */}
+          </div>
         </div>
       </div>
     </div>
