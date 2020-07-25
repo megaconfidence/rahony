@@ -85,5 +85,14 @@
         width: 65%;
       }
     }
+    @media (min-width: 880px) {
+      .info {
+        &__details {
+          .detail {
+            max-width: 70%;
+          }
+        }
+      }
+    }
   }
 }

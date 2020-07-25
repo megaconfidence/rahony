@@ -22,6 +22,18 @@ const LodgePage = () => {
           <td>&#8358; 5,500</td>
         </tr>
       </table>
+      <div className='info'>
+        <div  className='info__text'> Contact us for enquiries on lodge via</div>
+        <div className='detail'>
+          <div className='detail__icon'>
+            <img src='/images/phone.svg' alt='phone' />
+          </div>
+          <div className='detail__items'>
+            <div>09010984790</div>
+            <div>09036771169</div>
+          </div>
+        </div>
+      </div>
       <div className='note'>
         Please note, Lodging is currently only available at our Jibowu terminal
       </div>
