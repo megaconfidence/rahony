@@ -15,6 +15,7 @@ import Header from './components/Header';
 import Contact from './routes/Contact';
 import Places from './routes/Places';
 import Explore from './routes/Explore';
+import Booking from './routes/Booking';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -22,17 +23,21 @@ const ScrollToTop = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;
-}
-
+};
 
 function App() {
   return (
     <div className='App'>
       <Router>
-      <ScrollToTop />
+        <ScrollToTop />
         <Header />
         <Switch>
           <Route exact path='/' render={(props) => <Home {...props} />} />
+          <Route
+            exact
+            path='/booking'
+            render={(props) => <Booking {...props} />}
+          />
           <Route exact path='/about' render={(props) => <About {...props} />} />
           <Route exact path='/lodge' render={(props) => <Lodge {...props} />} />
           <Route
