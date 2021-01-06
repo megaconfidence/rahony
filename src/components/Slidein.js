@@ -13,8 +13,8 @@ const Slidein = forwardRef((_, ref) => {
       <div className='slidein__navi'>
         <ul className='slidein__navi__links'>
           <li className='slidein__navi__links__item'>
-            <NavLink exact to='/' activeClassName='active' onClick={closeNav}>
-              Home
+            <NavLink exact to='/booking' activeClassName='active' onClick={closeNav}>
+              Booking
             </NavLink>
           </li>
           <li className='slidein__navi__links__item'>

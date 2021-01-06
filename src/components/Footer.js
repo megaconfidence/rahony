@@ -13,6 +13,9 @@ const Footer = () => {
           <div className='footer__links__item__title'>Company</div>
           <ul className='footer__links__item__link'>
             <li>
+              <NavLink to='/'>Home</NavLink>
+            </li>
+            <li>
               <NavLink to='/about'>About</NavLink>
             </li>
             <li>
