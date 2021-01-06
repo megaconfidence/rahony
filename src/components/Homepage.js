@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  useEffect(() => {
     const places = document.querySelectorAll(
       '.group--places .group__list__item'
     );

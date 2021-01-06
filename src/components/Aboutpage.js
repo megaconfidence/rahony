@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Aboutpage.scss';
 import Head from './Head';
 const AboutPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='aboutpage'>
       <div className='summary'>

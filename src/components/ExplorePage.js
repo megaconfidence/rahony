@@ -82,6 +82,10 @@ const ExplorePage = ({ location: { pathname } }) => {
     },
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
+  useEffect(() => {
     map.current.innerHTML = ` <iframe
     title='maps'
     scrolling='no'

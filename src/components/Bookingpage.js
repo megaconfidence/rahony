@@ -1,7 +1,7 @@
 import Head from './Head';
 import './Bookingpage.scss';
 import Loading from './Loading';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import parsePhoneNumber from 'libphonenumber-js';
 
 const Bookingpage = () => {
@@ -14,6 +14,10 @@ const Bookingpage = () => {
   const [departure, setDeparture] = useState('');
   const [ticketLink, setTicketLink] = useState('');
   const [destination, setDestination] = useState('');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const handleSubmit = async (e) => {
     setLoading(true);

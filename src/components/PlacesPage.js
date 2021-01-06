@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './PlacesPage.scss';
 import Head from './Head';
 import { Link } from 'react-router-dom';
@@ -41,6 +41,9 @@ const PlacesPage = () => {
       state: 'Bayelsa'
     }
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className='placespage'>
       <p>Lovely places across Nigeria where you can get our services.</p>
