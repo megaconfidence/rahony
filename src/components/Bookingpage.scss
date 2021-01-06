@@ -19,12 +19,15 @@
       input,
       select {
         height: 40px;
-        width: 50%;
+        width: 230px;
       }
-      @media (min-width: 420px) {
+
+      @media (max-width: 420px) {
         input,
         select {
-          width: 230px;
+          width: 50%;
+          padding-left: 10px;
+          border-radius: 5px;
         }
       }
     }
