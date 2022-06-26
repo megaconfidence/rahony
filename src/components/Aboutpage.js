@@ -113,22 +113,6 @@ const AboutPage = () => {
           <div className='person'>
             <div className='person__cover'>
               <img
-                src='/images/adeleke.jpg'
-                alt='executive'
-                className='person__cover__img'
-              />
-            </div>
-            <div>
-              <div className='name'>
-                <span className='name__surname'>Adejobi</span>
-                <span className='name__firstname'>Adeleke</span>
-              </div>
-              <div className='position'>Logistics Supervisor</div>
-            </div>
-          </div>{' '}
-          <div className='person'>
-            <div className='person__cover'>
-              <img
                 src='/images/innocent.jpg'
                 alt='executive'
                 className='person__cover__img'

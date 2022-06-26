@@ -23,14 +23,14 @@ const Nav = forwardRef((_, ref) => {
           <NavLink to='/places' activeClassName='active'>
             Places
           </NavLink>
-        </li> <li className='navi__links__item'>
-          <NavLink exact to='/about' activeClassName='active'>
-            About
-          </NavLink>
         </li>
         <li className='navi__links__item'>
           <NavLink exact to='/lodge' activeClassName='active'>
             Lodge
+          </NavLink>
+        </li> <li className='navi__links__item'>
+          <NavLink exact to='/about' activeClassName='active'>
+            About
           </NavLink>
         </li>
         <li className='navi__links__item'>
