@@ -15,9 +15,7 @@ const Bookingpage = () => {
   const [departure, setDeparture] = useState('');
   const [ticketLink, setTicketLink] = useState('');
   const [destination, setDestination] = useState('');
-  const { email, setEmail } = useState('');
-  const { tnxStatus, setTnxStatus } = useState('');
-  const { tnxRef, setTnxRef } = useState('');
+  const [email, setEmail] = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -37,60 +35,63 @@ const Bookingpage = () => {
     customizations: {
       title: 'Rahony',
       description: 'Payment for trip',
-      logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+      logo: 'https://rahony.vercel.app/images/logo.png',
     },
   };
 
   const handleFlutterPayment = useFlutterwave(config);
 
-  const createPayment = () => {
-    handleFlutterPayment({
-      callback: (response) => {
-        setTnxStatus(response.status)
-        setTnxRef(response.tx_ref);
-        closePaymentModal()
-      },
-      onClose: () => { },
-    });
-  }
 
   const handleSubmit = async (e) => {
     setLoading(true);
     e.preventDefault();
-    const backendURL = process.env.REACT_APP_BACKEND;
 
-    const data = {
-      date,
-      name,
-      seats,
-      departure,
-      destination,
-      phone: parsePhoneNumber(phone, 'NG')
-        .formatInternational()
-        .replace(/\s/g, ''),
-    };
+    handleFlutterPayment({
+      callback: async (fwRes) => {
+        closePaymentModal()
+        const backendURL = process.env.REACT_APP_BACKEND;
 
-    const response = await fetch(backendURL + '/api/booking', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
+        const data = {
+          date,
+          name,
+          seats,
+          email,
+          departure,
+          destination,
+          tnxStatus: fwRes.status,
+          tnxRef: String(fwRes.tx_ref),
+          phone: parsePhoneNumber(phone, 'NG')
+            .formatInternational()
+            .replace(/\s/g, ''),
+        };
+
+        console.log(data)
+
+        const response = await fetch(backendURL + '/api/booking', {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+
+        setLoading(false);
+        const res = await response.json();
+
+        if (response.status === 200) {
+          setTicketLink(backendURL + res.data.pdfpath);
+        } else {
+          const list = [];
+          const errObj = res.error[0];
+          for (const key in errObj) {
+            list.push(errObj[key]);
+          }
+          setError(list);
+        }
       },
+      onClose: () => { },
     });
 
-    setLoading(false);
-    const res = await response.json();
-
-    if (response.status === 200) {
-      setTicketLink(backendURL + res.data.pdfpath);
-    } else {
-      const list = [];
-      const errObj = res.error[0];
-      for (const key in errObj) {
-        list.push(errObj[key]);
-      }
-      setError(list);
-    }
   };
 
   if (error.length) {
@@ -133,7 +134,7 @@ const Bookingpage = () => {
   return (
     <div className='bookingpage'>
       {loading ? <Loading /> : null}
-      <Head content='Fill Out The Form' />
+      <Head content='Fill Out The Form And Pay Online' />
       <form onSubmit={handleSubmit}>
         <label>
           <span>Name</span>
@@ -146,6 +147,31 @@ const Bookingpage = () => {
             placeholder='Your name'
             onChange={({ target }) => {
               setName(target.value);
+            }}
+          />
+        </label>
+        <label>
+          <span>Email</span>
+          <input
+            required
+            type='email'
+            value={email}
+            placeholder='email@example.com'
+            onChange={({ target }) => {
+              setEmail(target.value);
+            }}
+          />
+        </label>
+        <label>
+          <span>Phone</span>
+          <input
+            required
+            type='tel'
+            value={phone}
+            placeholder='07010020030'
+            pattern='(^[0]\d{10}$)|(^[\+]?[234]\d{12}$)'
+            onChange={({ target }) => {
+              setPhone(target.value);
             }}
           />
         </label>
@@ -207,20 +233,6 @@ const Bookingpage = () => {
             min={new Date().toISOString().split('T')[0]}
           />
         </label>
-        <label>
-          <span>Phone</span>
-          <input
-            required
-            type='tel'
-            value={phone}
-            placeholder='07010020030'
-            pattern='(^[0]\d{10}$)|(^[\+]?[234]\d{12}$)'
-            onChange={({ target }) => {
-              setPhone(target.value);
-            }}
-          />
-        </label>
-        <button onClick={createPayment}>Pay</button>
         <input type='submit' value='Submit' />
       </form>
     </div>
