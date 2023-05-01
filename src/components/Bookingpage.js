@@ -3,6 +3,7 @@ import './Bookingpage.scss';
 import Loading from './Loading';
 import React, { useEffect, useState } from 'react';
 import parsePhoneNumber from 'libphonenumber-js';
+import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
 const Bookingpage = () => {
   const [date, setDate] = useState('');
@@ -14,10 +15,44 @@ const Bookingpage = () => {
   const [departure, setDeparture] = useState('');
   const [ticketLink, setTicketLink] = useState('');
   const [destination, setDestination] = useState('');
+  const { email, setEmail } = useState('');
+  const { tnxStatus, setTnxStatus } = useState('');
+  const { tnxRef, setTnxRef } = useState('');
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const config = {
+    public_key: 'FLWPUBK_TEST-4f550359ce147a5ca05ee22ddddf34c9-X',
+    tx_ref: Date.now(),
+    amount: 1000,
+    currency: 'NGN',
+    payment_options: 'card,mobilemoney,ussd',
+    customer: {
+      name,
+      email,
+      phone_number: phone,
+    },
+    customizations: {
+      title: 'Rahony',
+      description: 'Payment for trip',
+      logo: 'https://st2.depositphotos.com/4403291/7418/v/450/depositphotos_74189661-stock-illustration-online-shop-log.jpg',
+    },
+  };
+
+  const handleFlutterPayment = useFlutterwave(config);
+
+  const createPayment = () => {
+    handleFlutterPayment({
+      callback: (response) => {
+        setTnxStatus(response.status)
+        setTnxRef(response.tx_ref);
+        closePaymentModal()
+      },
+      onClose: () => { },
+    });
+  }
 
   const handleSubmit = async (e) => {
     setLoading(true);
@@ -185,6 +220,7 @@ const Bookingpage = () => {
             }}
           />
         </label>
+        <button onClick={createPayment}>Pay</button>
         <input type='submit' value='Submit' />
       </form>
     </div>
