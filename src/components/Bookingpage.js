@@ -1,7 +1,7 @@
 import Head from './Head';
 import './Bookingpage.scss';
 import Loading from './Loading';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import parsePhoneNumber from 'libphonenumber-js';
 import { useFlutterwave, closePaymentModal } from 'flutterwave-react-v3';
 
@@ -11,11 +11,15 @@ const Bookingpage = () => {
   const [seats, setSeats] = useState(1);
   const [phone, setPhone] = useState('');
   const [error, setError] = useState([]);
+  const [amount, setAmount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [departure, setDeparture] = useState('');
   const [ticketLink, setTicketLink] = useState('');
   const [destination, setDestination] = useState('');
   const [email, setEmail] = useState('');
+
+  const backendURL = process.env.REACT_APP_BACKEND;
+  const locations = ['', 'lagos', 'port harcourt', 'abuja', 'imo', 'bayelsa'];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,7 +28,7 @@ const Bookingpage = () => {
   const config = {
     public_key: 'FLWPUBK_TEST-4f550359ce147a5ca05ee22ddddf34c9-X',
     tx_ref: Date.now(),
-    amount: 1000,
+    amount: amount * seats,
     currency: 'NGN',
     payment_options: 'card,mobilemoney,ussd',
     customer: {
@@ -41,6 +45,17 @@ const Bookingpage = () => {
 
   const handleFlutterPayment = useFlutterwave(config);
 
+  const getAmount = useCallback(async (dep, des) => {
+    const res = await fetch(backendURL + '/api/pricing', {
+      method: 'POST',
+      body: JSON.stringify({ departure: dep || departure, destination: des || destination }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    const response = await res.json()
+    return response?.data?.price
+  }, [departure, destination, backendURL])
 
   const handleSubmit = async (e) => {
     setLoading(true);
@@ -49,7 +64,6 @@ const Bookingpage = () => {
     handleFlutterPayment({
       callback: async (fwRes) => {
         closePaymentModal()
-        const backendURL = process.env.REACT_APP_BACKEND;
 
         const data = {
           date,
@@ -64,8 +78,6 @@ const Bookingpage = () => {
             .formatInternational()
             .replace(/\s/g, ''),
         };
-
-        console.log(data)
 
         const response = await fetch(backendURL + '/api/booking', {
           method: 'POST',
@@ -89,7 +101,9 @@ const Bookingpage = () => {
           setError(list);
         }
       },
-      onClose: () => { },
+      onClose: () => {
+        setLoading(false);
+      },
     });
 
   };
@@ -110,8 +124,8 @@ const Bookingpage = () => {
   if (ticketLink) {
     return (
       <div className='bookingpage'>
-        <Head content='Download Your Ticket' />
-        <p>Click the button bellow to download your ticket</p>
+        <Head content='Booking successful!' />
+        <p>Your ticket has been sent to <u>{email}</u>. Alternatively, click the button bellow to download your ticket</p>
         <p>
           <strong>
             You will need to present the ticket at the bus station
@@ -180,16 +194,14 @@ const Bookingpage = () => {
           <select
             value={departure}
             required
-            onChange={({ target }) => {
+            onChange={async ({ target }) => {
               setDeparture(target.value);
+              setAmount(await getAmount(target.value, ''));
             }}
           >
-            <option value=''>Select departure</option>
-            <option value='lagos'>Lagos</option>
-            <option value='port harcourt'>Port harcourt</option>
-            <option value='abuja'>Abuja</option>
-            <option value='imo'>Imo</option>
-            <option value='bayelsa'>Bayelsa</option>
+            {locations.filter(i => !i || i !== destination).map(i =>
+              <option key={i} value={i}>{i ? i.charAt(0).toUpperCase() + i.slice(1) : 'Select departure'}</option>
+            )}
           </select>
         </label>{' '}
         <label>
@@ -197,16 +209,14 @@ const Bookingpage = () => {
           <select
             value={destination}
             required
-            onChange={({ target }) => {
+            onChange={async ({ target }) => {
               setDestination(target.value);
+              setAmount(await getAmount('', target.value));
             }}
           >
-            <option value=''>Select destination</option>
-            <option value='lagos'>Lagos</option>
-            <option value='port harcourt'>Port harcourt</option>
-            <option value='abuja'>Abuja</option>
-            <option value='imo'>Imo</option>
-            <option value='bayelsa'>Bayelsa</option>
+            {locations.filter(i => !i || i !== departure).map(i =>
+              <option key={i} value={i}>{i ? i.charAt(0).toUpperCase() + i.slice(1) : 'Select destination'}</option>
+            )}
           </select>
         </label>
         <label>
