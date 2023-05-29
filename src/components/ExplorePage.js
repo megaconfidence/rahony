@@ -7,10 +7,10 @@ const ExplorePage = ({ location: { pathname } }) => {
   const place = pathname.replace('/places/', '');
   const details = {
     jibowu: {
-      phone0: '08039164323',
-      phone1: '09010984779',
-      phone2: '08023011552',
-      phone3: '09036771158',
+      phone0: '08023011552',
+      phone1: '09036771158',
+      phone2: '08039164323',
+      phone3: '09036771159',
       address: '29, Ikorodu Road, Jibowu Bus Stop',
       state: 'Lagos State',
       intro: ` Lagos State is the economic capital of Nigeria, located in the southwestern part of the country. The smallest in size of Nigeria's states, Lagos State is the most populous state.
@@ -37,9 +37,9 @@ const ExplorePage = ({ location: { pathname } }) => {
     },
     'water line': {
       phone0: '08039164323',
-      phone1: '0901084783',
-      phone2: '0901084784',
-      address: '188, Aba Road Water Line Bus Stop',
+      phone1: '09036771163',
+      phone2: '09036771162',
+      address: '123, Aba Road Opp. Rumukalagbor Street Waterlines Bus Stop Port Harcourt',
       state: 'Rivers State',
       intro: `Rivers State, also known simply as Rivers, is one of the 36 states of Nigeria. According to census data released in 2006, the state has a population of 5,198,716, making it the sixth-most populous state in the country. Its capital and largest city, Port Harcourt, is economically significant as the centre of Nigeria's oil industry. Rivers State is bounded on the South by the Atlantic Ocean, to the North by Imo and Abia, to the East by Akwa Ibom State, and to the West by Bayelsa and Delta states. It is home of many ethnic group,majorly :Ikwerre people, Ikwerre, a subgroup of the Igbo Ethnic Group, Ijaw Subgroups, Ogoni people and many other ethnic groups. The people from Rivers State are known as "Riverians". The inland part of the state consists of tropical rainforest; towards the coast, the typical Niger Delta environment features many mangrove swamps. `,
       body: 'Our location is at the ever busy Aba road, Waterlines Bus Stop where we convey passengers to Benin, Ijebu Ode, Lagos and Abuja',
@@ -47,7 +47,7 @@ const ExplorePage = ({ location: { pathname } }) => {
     'oil mill': {
       phone0: '08039164323',
       phone1: '09036771164',
-      phone2: '09010984785',
+      phone2: '09036771158',
       address: '302, Aba Road, Oil Mill Bus Stop',
       state: 'Rivers State',
       intro: `Rivers State, also known simply as Rivers, is one of the 36 states of Nigeria. According to census data released in 2006, the state has a population of 5,198,716, making it the sixth-most populous state in the country. Its capital and largest city, Port Harcourt, is economically significant as the centre of Nigeria's oil industry. Rivers State is bounded on the South by the Atlantic Ocean, to the North by Imo and Abia, to the East by Akwa Ibom State, and to the West by Bayelsa and Delta states. It is home of many ethnic group,majorly :Ikwerre people, Ikwerre, a subgroup of the Igbo Ethnic Group, Ijaw Subgroups, Ogoni people and many other ethnic groups. The people from Rivers State are known as "Riverians". The inland part of the state consists of tropical rainforest; towards the coast, the typical Niger Delta environment features many mangrove swamps. `,
@@ -66,7 +66,7 @@ const ExplorePage = ({ location: { pathname } }) => {
     },
     owerri: {
       phone0: '08039164323',
-      phone1: '09010984788',
+      phone1: '09036771158',
       phone2: '07036736670',
       address: 'Plot 38, Egbu Road, Owerri',
       state: 'Imo State',
@@ -75,7 +75,7 @@ const ExplorePage = ({ location: { pathname } }) => {
     },
     yenogoa: {
       phone0: '08039164323',
-      phone1: '09010984786',
+      phone1: '09036771158',
       phone2: '09036771165',
       address: '354, Melford Okilo Road, Yenogoa',
       state: 'Bayelsa State',

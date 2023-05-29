@@ -14,19 +14,19 @@ const LodgePage = () => {
         </tr>
         <tr>
           <td>Standard Room</td>
-          <td>&#8358; 3,500</td>
-        </tr>
-        <tr>
-          <td>Medium Room</td>
           <td>&#8358; 4,500</td>
         </tr>
         <tr>
-          <td>Executive Room</td>
+          <td>Medium Room</td>
           <td>&#8358; 5,500</td>
+        </tr>
+        <tr>
+          <td>Executive Room</td>
+          <td>&#8358; 6,500</td>
         </tr>
       </table>
       <div className='info'>
-        <div  className='info__text'> Contact us for enquiries on lodge via</div>
+        <div className='info__text'> Contact us for enquiries on lodge via</div>
         <div className='detail'>
           <div className='detail__icon'>
             <img src='/images/phone.svg' alt='phone' />
