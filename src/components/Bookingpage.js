@@ -22,8 +22,11 @@ const Bookingpage = () => {
   const locations = ['', 'lagos', 'port harcourt', 'abuja', 'owerri', 'yenogoa'];
 
   useEffect(() => {
+    (async () => {
+      await fetch(backendURL);
+    })()
     window.scrollTo(0, 0);
-  }, []);
+  }, [backendURL]);
 
   const config = {
     public_key: 'FLWPUBK_TEST-4f550359ce147a5ca05ee22ddddf34c9-X',
