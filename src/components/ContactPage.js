@@ -25,7 +25,9 @@ const ContactPage = () => {
           <img src='/images/phone.svg' alt='phone' />
         </div>
         <div className='detail__items'>
-          <div>09010984779</div>
+          <div>09036771160</div>
+          <div>09036771159</div>
+          <div>09036771158</div>
           <div>08023011552</div>
         </div>
       </div>

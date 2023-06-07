@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import './ExplorePage.scss';
 import Head from './Head';
 
 const ExplorePage = ({ location: { pathname } }) => {
   const map = useRef(null);
   const place = pathname.replace('/places/', '');
-  const details = {
+  const details = useMemo(()=>({
     jibowu: {
       phone0: '08023011552',
       phone1: '09036771158',
@@ -23,7 +23,6 @@ const ExplorePage = ({ location: { pathname } }) => {
     },
     ejigbo: {
       phone0: '08039164323',
-      phone1: '0901084782',
       phone2: '09036771166',
       address: '90, Egbe Road, Powerline Bus Stop',
       state: 'Lagos State',
@@ -47,7 +46,6 @@ const ExplorePage = ({ location: { pathname } }) => {
     'oil mill': {
       phone0: '08039164323',
       phone1: '09036771164',
-      phone2: '09036771158',
       address: '302, Aba Road, Oil Mill Bus Stop',
       state: 'Rivers State',
       intro: `Rivers State, also known simply as Rivers, is one of the 36 states of Nigeria. According to census data released in 2006, the state has a population of 5,198,716, making it the sixth-most populous state in the country. Its capital and largest city, Port Harcourt, is economically significant as the centre of Nigeria's oil industry. Rivers State is bounded on the South by the Atlantic Ocean, to the North by Imo and Abia, to the East by Akwa Ibom State, and to the West by Bayelsa and Delta states. It is home of many ethnic group,majorly :Ikwerre people, Ikwerre, a subgroup of the Igbo Ethnic Group, Ijaw Subgroups, Ogoni people and many other ethnic groups. The people from Rivers State are known as "Riverians". The inland part of the state consists of tropical rainforest; towards the coast, the typical Niger Delta environment features many mangrove swamps. `,
@@ -56,7 +54,6 @@ const ExplorePage = ({ location: { pathname } }) => {
     'tunde idiagbon': {
       phone0: '08039164323',
       phone1: '09036771167',
-      phone2: '0901084787',
       phone3: '09036771168',
       address: 'Plot 9, Tunde Idiagbon Way, Jabi Motor Park',
       state: 'Abuja FCT',
@@ -66,7 +63,6 @@ const ExplorePage = ({ location: { pathname } }) => {
     },
     owerri: {
       phone0: '08039164323',
-      phone1: '09036771158',
       phone2: '07036736670',
       address: 'Plot 38, Egbu Road, Owerri',
       state: 'Imo State',
@@ -75,14 +71,13 @@ const ExplorePage = ({ location: { pathname } }) => {
     },
     yenogoa: {
       phone0: '08039164323',
-      phone1: '09036771158',
       phone2: '09036771165',
       address: '354, Melford Okilo Road, Yenogoa',
       state: 'Bayelsa State',
       intro: `Bayelsa State is a state in southern Nigeria in the core Niger Delta region, between Delta State and Rivers State. Its capital is Yenagoa. The language spoken here is Ijaw language as well as Igbo Language in some localities like Ogbia area etc. However, like the rest of Nigeria, English is the official language. The state was formed in 1996 from part of Rivers State and thus, it is one of the newest states of the Nigerian federation. `,
       body: 'Our office is located at Okilo road, opposite Wema Bank, where we convey passengers to Benin, Auchi, Lokoja, Abuja, Kaduna, Sagamu and Lagos',
     },
-  };
+  }), []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

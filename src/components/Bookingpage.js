@@ -19,7 +19,7 @@ const Bookingpage = () => {
   const [email, setEmail] = useState('');
 
   const backendURL = process.env.REACT_APP_BACKEND;
-  const locations = ['', 'lagos', 'port harcourt', 'abuja', 'imo', 'bayelsa'];
+  const locations = ['', 'lagos', 'port harcourt', 'abuja', 'owerri', 'yenogoa'];
 
   useEffect(() => {
     window.scrollTo(0, 0);
