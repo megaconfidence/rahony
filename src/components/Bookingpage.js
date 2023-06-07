@@ -22,7 +22,6 @@ const Bookingpage = () => {
   const locations = ['', 'lagos', 'port harcourt', 'abuja', 'owerri', 'yenogoa'];
 
   useEffect(() => {
-    //
     (async () => {
       await fetch(backendURL);
     })()
