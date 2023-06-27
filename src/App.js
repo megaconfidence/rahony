@@ -19,9 +19,14 @@ import Booking from './routes/Booking';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+  const backendURL = process.env.REACT_APP_BACKEND;
+
   useEffect(() => {
+    (async () => {
+      await fetch(backendURL);
+    })()
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [pathname, backendURL]);
   return null;
 };
 
